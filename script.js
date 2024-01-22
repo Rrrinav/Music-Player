@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let songs;
   let currFolder = "Ghazals";
   let currentSong = new Audio(
-    "http://127.0.0.1:5500/Songs/Playlist%202/Choliya%20Ke%20Hook.mp3"
+    "/Songs/Playlist%202/Choliya%20Ke%20Hook.mp3"
   );
   currentSong.loop = "true";
 
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   async function get_Songs(folder) {
     try {
       currFolder = folder;
-      let response = await fetch(`http://127.0.0.1:5500/Songs/${folder}/`);
+      let response = await fetch(`/Songs/${folder}/`);
       let data = await response.text();
 
       let songDiv = document.createElement("div");
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function loadCards() {
     try {
-      let response = await fetch(`http://127.0.0.1:5500/Songs/`);
+      let response = await fetch(`/Songs/`);
       let data = await response.text();
 
       let cardContainer = document.querySelector(".card-container");
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .replaceAll("%20", " ")
             .replaceAll("/", "");
           let response = await fetch(
-            `http://127.0.0.1:5500/Songs/${folder}/info.json`
+            `/Songs/${folder}/info.json`
           );
           let info = await response.json();
 

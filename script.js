@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let songs;
   let currFolder = "Ghazals";
   let currentSong = new Audio(
-    "/Songs/Memes/Choliya Ke Hook.mp3"
+    "http://127.0.0.1:5500/Songs/Memes/Choliya%20Ke%20Hook.mp3"
   );
   currentSong.loop = "true";
 
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   async function get_Songs(folder) {
     try {
       currFolder = folder;
-      let response = await fetch(`/Songs/${folder}/`);
+      let response = await fetch(`http://127.0.0.1:5500/Songs/${folder}/`);
       let data = await response.text();
 
       let songDiv = document.createElement("div");
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function loadCards() {
     try {
-      let response = await fetch(`/Songs/`);
+      let response = await fetch(`http://127.0.0.1:5500/Songs/`);
       let data = await response.text();
 
       let cardContainer = document.querySelector(".card-container");
@@ -130,10 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
           let folder = anchor.href
             .split("/Songs/")
             .slice(-1)[0]
-            .replaceAll(" ", " ")
+            .replaceAll("%20", " ")
             .replaceAll("/", "");
           let response = await fetch(
-            `/Songs/${folder}/info.json`
+            `http://127.0.0.1:5500/Songs/${folder}/info.json`
           );
           let info = await response.json();
 
@@ -232,7 +232,7 @@ console.log("kk")
         .split("/")
         .slice(-1)[0]
         .replace(".mp3", " ")
-        .replaceAll(" ", " ");
+        .replaceAll("%20", " ");
       const index = songs.indexOf(currentSongFilename);
 
       if (index > 0) {
@@ -250,7 +250,7 @@ console.log("kk")
         .split("/")
         .slice(-1)[0]
         .replace(".mp3", " ")
-        .replaceAll(" ", " ");
+        .replaceAll("%20", " ");
       const index = songs.indexOf(currentSongFilename);
 
       if (index < songs.length - 1) {

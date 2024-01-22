@@ -1,4 +1,26 @@
 {
-    "title" : "Bollywood",
-    "description" : "Jam to Bollywood hits"
+  "title": "Bollywood Playlist",
+  "description": "Best Bollywood songs",
+  "songs": [
+    {
+      "name": "Senorita",
+      "artist": "Pritam"
+    },
+    {
+        "name": "Achha Lagta Hai",
+        "artist": "Shreya Ghoshal"
+    },
+     {
+        "name": "Ambarsariya",
+        "artist": "Sonia Mohapatra"
+    },
+     {
+        "name": "Iktara",
+        "artist": "Amit Trivedi"
+    },
+     {
+        "name": "Tere Bina",
+        "artist": "A.R. Rahman"
+    },
+  ]
 }

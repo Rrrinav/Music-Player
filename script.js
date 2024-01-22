@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let songs;
   let currFolder = "Bollywood";
   let currentSong = new Audio(
-    "Songs/Memes/Senorita.mp3"
+    "Songs/Bollywood/Senorita.mp3"
   );
   currentSong.loop = "true";
 

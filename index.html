@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <title>Music</title>
+</head>
+
+<body>
+    <div class="container" >
+        <div class="left ">
+
+            <div class="home bg_grey p-1">
+                <div class="logo"> 
+                <img src="assets/logo.svg" alt="Spotify"> 
+                <img src="assets/menu-close.svg" id="menu-close" alt="">
+                </div>
+                <ul>
+                    <li> <img src="assets/home_sign.svg" alt="home"> Home </li>
+                    <li> <img src="assets/search.svg" alt="home"> search </li>
+                </ul>
+            </div>
+
+            <div class="library bg_grey p-1">
+
+                <div class="heading_of_lib display_flex">
+                    <img src="assets/library.svg" alt="playlist">
+                    <h3>Songs</h3>
+                </div>
+
+                <div class="library-contents">
+                    <ul class="library-songList">
+                        <li>
+                            <div class="li-info-right">
+
+                                <img src="assets/note.svg" alt="">
+
+                                <div class="library-li-info">
+                                    <div class="name">
+                                        Name
+                                    </div>
+                                    <div class="artist">
+                                        Artist
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="play-li">
+                                <img src="assets/bar-play-button.svg" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer bg_grey p-1">
+                <div class="cont">
+                    <div class="footer_content" id="legal">Legal</div>
+                    <div class="footer_content" id="privacyCenter">Privacy Center</div>
+                    <div class="footer_content" id="privacyPolicy">Privacy Policy</div>
+                    <div class="footer_content" id="cookies">Cookies</div>
+                    <div class="footer_content" id="aboutAds">About Ads</div>
+                    <div class="footer_content" id="accessibility">Accessibility</div>
+                </div>
+                <div class="lang_eng">
+                    <button id="lang_eng_butt"><img src="assets/lang_eng.svg" alt=""> English</button>
+                </div>
+            </div>
+        </div>
+        <div class="right p-1 ">
+            <div class="header">
+                <div class="left-right">
+                    <div class="hamburger">
+                        <img src="assets/menu.svg" alt="">
+                    </div>
+                    <img src="assets/left.svg" alt="" class="m-l">
+                    <img src="assets/right.svg" alt="" class="m-l">
+                </div>
+                <div class="login-sign">
+                    <button>Sign Up</button>
+                    <button class="m-l">Log in</button>
+                </div>
+            </div>
+            <div class="spotify-playlists p-1">
+                <h1 style="margin-bottom: 30px;">Playlists</h1>
+                <div class="card-container">
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="playbar">
+        <div class="songinfo" id="songPlaybarTrname">
+            Choliya Ke Hook 
+        </div>
+
+        <div class="basic-control">
+            <img id="back" src="assets/bar-left.svg" alt="" style="cursor: pointer;">
+            <img id="play" src="assets/bar-play-button.svg" alt="" style="cursor: pointer;">
+            <img id="forw" src="assets/bar-right.svg" alt="" style="cursor: pointer;">
+        </div>
+
+        <div class="seekbar">
+            <div class="songtime" id="songPlaybarDuration">
+                00:00 / 00:00
+            </div>
+            <div class="circle">
+                
+            </div>
+        </div>
+
+        <div class="volume">
+            <div class="volume-container">
+                <img src="assets/volume.svg" alt="">
+                <input type="range" name="range" id="vol-range" min="0" max="100" value="100">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

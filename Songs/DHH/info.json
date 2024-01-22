@@ -1,4 +1,22 @@
 {
     "title" : "DHH",
     "description" : "Sit back and groove"
+ "songs": [
+    {
+      "name": "Luka Chippi",
+      "artist": "Seedhe Maut"
+    },
+    {
+        "name": "Maharani",
+        "artist": "Arpit Bala"
+    },
+     {
+        "name": "VYANJAN",
+        "artist": "Kr$na"
+    },
+     {
+        "name": "IDENTITY THEFT",
+        "artist": "Char Diwari"
+    },
+  ]
 }

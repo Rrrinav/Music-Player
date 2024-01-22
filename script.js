@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let songs;
   let currFolder = "Ghazals";
   let currentSong = new Audio(
-    "/Songs/Playlist%202/Choliya%20Ke%20Hook.mp3"
+    "/Songs/Memes/Choliya Ke Hook.mp3"
   );
   currentSong.loop = "true";
 
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
           let folder = anchor.href
             .split("/Songs/")
             .slice(-1)[0]
-            .replaceAll("%20", " ")
+            .replaceAll(" ", " ")
             .replaceAll("/", "");
           let response = await fetch(
             `/Songs/${folder}/info.json`
@@ -232,7 +232,7 @@ console.log("kk")
         .split("/")
         .slice(-1)[0]
         .replace(".mp3", " ")
-        .replaceAll("%20", " ");
+        .replaceAll(" ", " ");
       const index = songs.indexOf(currentSongFilename);
 
       if (index > 0) {
@@ -250,7 +250,7 @@ console.log("kk")
         .split("/")
         .slice(-1)[0]
         .replace(".mp3", " ")
-        .replaceAll("%20", " ");
+        .replaceAll(" ", " ");
       const index = songs.indexOf(currentSongFilename);
 
       if (index < songs.length - 1) {

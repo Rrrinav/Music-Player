@@ -1,4 +1,27 @@
 {
-    "title" : "Ghazals",
-    "description" : "Relax your mind with soothin melodies"
+    "title": "Ghazals",
+    "description": "Relax your mind with soothing melodies",
+    "songs": [
+        {
+            "name": "Aye Dil",
+            "artist": "Jagjit Singh"
+        },
+        {
+            "name": "Manzilein Kya Hai Raasta Kya Hai",
+            "artist": "Jagjit Singh"
+        },
+        {
+            "name": "Pukarta Chala",
+            "artist": "Mohammed Rafi"
+        },
+        {
+            "name": "Rafta Rafta",
+            "artist": "Mukesh"
+        },
+        {
+            "name": "Yeh Honsla",
+            "artist": "Shafqat Amanat Ali"
+        }
+    ]
 }
+

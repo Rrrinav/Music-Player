@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
               
 `);
   let songs;
-  let currFolder = "Ghazals";
+  let currFolder = "Bollywood";
   let currentSong = new Audio(
-    "Songs/Memes/Choliya Ke Hook.mp3"
+    "Songs/Memes/Senorita.mp3"
   );
   currentSong.loop = "true";
 
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   async function get_Songs(folder) {
     try {
       currFolder = folder;
-      let response = await fetch(`http://127.0.0.1:5500/Songs/${folder}/`);
+      let response = await fetch(`Songs/${folder}/`);
       let data = await response.text();
 
       let songDiv = document.createElement("div");
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function loadCards() {
     try {
-      let response = await fetch(`http://127.0.0.1:5500/Songs/`);
+      let response = await fetch(`Songs/`);
       let data = await response.text();
 
       let cardContainer = document.querySelector(".card-container");
@@ -130,10 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
           let folder = anchor.href
             .split("/Songs/")
             .slice(-1)[0]
-            .replaceAll("%20", " ")
+            .replaceAll(" ", " ")
             .replaceAll("/", "");
           let response = await fetch(
-            `http://127.0.0.1:5500/Songs/${folder}/info.json`
+            `Songs/${folder}/info.json`
           );
           let info = await response.json();
 
@@ -232,7 +232,7 @@ console.log("kk")
         .split("/")
         .slice(-1)[0]
         .replace(".mp3", " ")
-        .replaceAll("%20", " ");
+        .replaceAll(" ", " ");
       const index = songs.indexOf(currentSongFilename);
 
       if (index > 0) {
@@ -250,7 +250,7 @@ console.log("kk")
         .split("/")
         .slice(-1)[0]
         .replace(".mp3", " ")
-        .replaceAll("%20", " ");
+        .replaceAll(" ", " ");
       const index = songs.indexOf(currentSongFilename);
 
       if (index < songs.length - 1) {

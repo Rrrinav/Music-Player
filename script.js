@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let songs;
   let currFolder = "Ghazals";
   let currentSong = new Audio(
-    "http://127.0.0.1:5500/Songs/Memes/Choliya%20Ke%20Hook.mp3"
+    "Songs/Memes/Choliya Ke Hook.mp3"
   );
   currentSong.loop = "true";
 

@@ -171,47 +171,42 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector("#menu-close").addEventListener("click", () => {
             document.querySelector(".left").style.left = "-120%";
         });
+back.addEventListener("click", () => {
+    const currentSongFilename = currentSong.src
+        .split("/")
+        .slice(-1)[0]
+        .replace(".mp3", "")
+        .replaceAll("%20", " ");
+    const index = songs.indexOf(currentSongFilename);
 
-        let back = document.getElementById("back");
-        let forward = document.getElementById("forw");
+    if (index > 0) {
+        const previousSong = songs[index - 1];
+        playMusic(previousSong);
+    } else {
+        // If index is 0 or less, play the last song in the list
+        const lastSong = songs[songs.length - 1];
+        playMusic(lastSong);
+    }
+});
 
-        back.addEventListener("click", () => {
-            const currentSongFilename = currentSong.src
-                const currentSongFilename = currentSong.src
-    .split("/")
-    .pop()
-    .replace(".mp3", "");
+forward.addEventListener("click", () => {
+    const currentSongFilename = currentSong.src
+        .split("/")
+        .slice(-1)[0]
+        .replace(".mp3", "")
+        .replaceAll("%20", " ");
+    const index = songs.indexOf(currentSongFilename);
 
-            const index = songs.indexOf(currentSongFilename);
+    if (index < songs.length - 1) {
+        const nextSong = songs[index + 1];
+        playMusic(nextSong);
+    } else {
+        // If index is the last index, play the first song in the list
+        const firstSong = songs[0];
+        playMusic(firstSong);
+    }
+});
 
-            if (index > 0) {
-                const previousSong = songs[index - 1];
-                playMusic(previousSong);
-            } else {
-                // If index is 0 or less, play the last song in the list
-                const lastSong = songs[songs.length - 1];
-                playMusic(lastSong);
-            }
-        });
-
-        forward.addEventListener("click", () => {
-            const currentSongFilename = currentSong.src
-                const currentSongFilename = currentSong.src
-    .split("/")
-    .pop()
-    .replace(".mp3", "");
-
-            const index = songs.indexOf(currentSongFilename);
-
-            if (index < songs.length - 1) {
-                const nextSong = songs[index + 1];
-                playMusic(nextSong);
-            } else {
-                // If index is the last index, play the first song in the list
-                const firstSong = songs[0];
-                playMusic(firstSong);
-            }
-        });
 
         document.querySelector(".circle").addEventListener("mousedown", (e) => {
             e.preventDefault();

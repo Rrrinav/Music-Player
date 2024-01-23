@@ -189,7 +189,7 @@ back.addEventListener("click", () => {
     }
 });
 
-   forward.addEventListener("click", () => {
+   forw.addEventListener("click", () => {
       const currentSongFilename = currentSong.src
         .split("/")
         .slice(-1)[0]

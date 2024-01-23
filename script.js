@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
             for (const playlist of data.playlists) {
                 cardContainer.innerHTML += `<div class="card-wrapper" data-folder="${playlist.folder}">
                                                 <div class="card p-1">
-                                                    <img src="https://rrrinav.github.io/Music-Player/Songs/${playlist.folder}/cover.jpg" alt="">
+                                                    <img src="https://rrrinav.github.io/Music-Player/Songs/${playlist.title}/cover.jpg" alt="">
                                                     <h4>${playlist.title}</h4>
                                                     <p>${playlist.description}</p>
                                                     <div class="play-button">

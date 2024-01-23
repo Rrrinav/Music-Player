@@ -7,20 +7,20 @@
       "artist": "Pritam"
     },
     {
-        "name": "Achha Lagta Hai",
-        "artist": "Shreya Ghoshal"
+      "name": "Achha Lagta Hai",
+      "artist": "Shreya Ghoshal"
     },
-     {
-        "name": "Ambarsariya",
-        "artist": "Sonia Mohapatra"
+    {
+      "name": "Ambarsariya",
+      "artist": "Sonia Mohapatra"
     },
-     {
-        "name": "Iktara",
-        "artist": "Amit Trivedi"
+    {
+      "name": "Iktara",
+      "artist": "Amit Trivedi"
     },
-     {
-        "name": "Tere Bina",
-        "artist": "A.R. Rahman"
-    },
+    {
+      "name": "Tere Bina",
+      "artist": "A.R. Rahman"
+    }
   ]
 }

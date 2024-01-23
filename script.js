@@ -152,10 +152,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        const volumeInput = document.getElementById("volume");
+        const volumeInput = document.getElementById("vol-range");
     volumeInput.addEventListener("input", () => {
         console.log("touched")
         currentSong.volume = volumeInput.value / 100;
+        if(volumeInput.value == 0){
+            document.querySelector(".volume-container img").src = "assets/volume-mute.svg";
     });
 
         currentSong.addEventListener("timeupdate", () => {

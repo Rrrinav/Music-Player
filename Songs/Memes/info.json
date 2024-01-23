@@ -1,30 +1,30 @@
 {
-    "title": "Your Playlist Title",
-    "description": "Your playlist description",
-    "songs": [
-        {
-            "name": "Bihari Boy",
-            "artist": "Akash Pal"
-        },
-        {
-            "name": "Choliya Ke Hook",
-            "artist": "Arvind Kallu"
-        },
-        {
-            "name": "Dafa 406",
-            "artist": "Chhotu Shikari"
-        },
-        {
-            "name": "Halal Boy",
-            "artist": "Deen Squad"
-        },
-        {
-            "name": "Mamta's Interlude",
-            "artist": "Gaunlet"
-        },
-        {
-            "name": "Meri Jaan Kasam",
-            "artist": "Aalim Jumma"
-        }
-    ]
+  "title": "Memes",
+  "description": "Laugh out loud with meme-inspired tunes",
+  "songs": [
+    {
+      "name": "Bihari Boy",
+      "artist": "Akash Pal"
+    },
+    {
+      "name": "Choliya Ke Hook",
+      "artist": "Arvind Kallu"
+    },
+    {
+      "name": "Dafa 406",
+      "artist": "Chhotu Shikari"
+    },
+    {
+      "name": "Halal Boy",
+      "artist": "Deen Squad"
+    },
+    {
+      "name": "Mamta's Interlude",
+      "artist": "Gauntlet"
+    },
+    {
+      "name": "Meri Jaan Kasam",
+      "artist": "Aalim Jumma"
+    }
+  ]
 }

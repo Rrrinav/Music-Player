@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currFolder = "Bollywood";
     let currentSong = new Audio("https://rrrinav.github.io/Music-Player/Songs/Bollywood/Senorita.mp3");
     currentSong.loop = true;
+    let currentSongIndex = 0;
 
     async function get_Songs(folder) {
         try {
@@ -171,41 +172,18 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector("#menu-close").addEventListener("click", () => {
             document.querySelector(".left").style.left = "-120%";
         });
-back.addEventListener("click", () => {
-    const currentSongFilename = currentSong.src
-        .split("/")
-        .slice(-1)[0]
-        .replace(".mp3", "")
-        .replaceAll("%20", " ");
-    const index = songs.indexOf(currentSongFilename);
+ 
+       back.addEventListener("click", () => {
+            currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+            console.log("Previous index:", currentSongIndex);
+            playMusic(songs[currentSongIndex]);
+        });
 
-    if (index > 0) {
-        const previousSong = songs[index - 1];
-        playMusic(previousSong);
-    } else {
-        // If index is 0 or less, play the last song in the list
-        const lastSong = songs[songs.length - 1];
-        playMusic(lastSong);
-    }
-});
-
-   forw.addEventListener("click", () => {
-    const currentSongFilename = currentSong.src
-        .split("/")
-        .slice(-1)[0]
-        .replace(".mp3", "")
-        .replaceAll("%20", " ");
-    const index = songs.indexOf(currentSongFilename);
-
-    if (index < songs.length - 1) {
-        const nextSong = songs[index + 1];
-        playMusic(nextSong);
-    } else {
-        // If index is the last index, play the first song in the list
-        const firstSong = songs[0];
-        playMusic(firstSong);
-    }
-});
+        forward.addEventListener("click", () => {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            console.log("Next index:", currentSongIndex);
+            playMusic(songs[currentSongIndex]);
+        });
 
 
         document.querySelector(".circle").addEventListener("mousedown", (e) => {

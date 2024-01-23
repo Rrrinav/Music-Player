@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
         currentSong.volume = volumeInput.value / 100;
         if(volumeInput.value == 0){
             document.querySelector(".volume-container img").src = "assets/volume-mute.svg";
-    });
+        }});
 
         currentSong.addEventListener("timeupdate", () => {
             update_time();

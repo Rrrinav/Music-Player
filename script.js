@@ -190,12 +190,10 @@ back.addEventListener("click", () => {
 });
 
 forward.addEventListener("click", () => {
-    const currentSongFilename = currentSong.src
-        .split("/")
-        .slice(-1)[0]
-        .replace(".mp3", "")
-        .replaceAll("%20", " ");
-    const index = songs.indexOf(currentSongFilename);
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            console.log("Next index:", currentSongIndex);
+            playMusic(songs[currentSongIndex]);
+        });
 
     if (index < songs.length - 1) {
         const nextSong = songs[index + 1];

@@ -189,21 +189,24 @@ back.addEventListener("click", () => {
     }
 });
 
-forward.addEventListener("click", () => {
-            currentSongIndex = (currentSongIndex + 1) % songs.length;
-            console.log("Next index:", currentSongIndex);
-            playMusic(songs[currentSongIndex]);
-        });
+   forward.addEventListener("click", () => {
+      const currentSongFilename = currentSong.src
+        .split("/")
+        .slice(-1)[0]
+        .replace(".mp3", " ")
+        .replaceAll("%20", " ");
+      const index = songs.indexOf(currentSongFilename);
 
-    if (index < songs.length - 1) {
+      if (index < songs.length - 1) {
+        // If there is a next song, play it
         const nextSong = songs[index + 1];
         playMusic(nextSong);
-    } else {
-        // If index is the last index, play the first song in the list
+      } else {
+        // If reaching the last song, play the first song
         const firstSong = songs[0];
         playMusic(firstSong);
-    }
-});
+      }
+    });
 
 
         document.querySelector(".circle").addEventListener("mousedown", (e) => {

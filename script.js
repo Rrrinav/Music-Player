@@ -171,10 +171,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         back.addEventListener("click", () => {
             const currentSongFilename = currentSong.src
-                .split("/")
-                .slice(-1)[0]
-                .replace(".mp3", " ")
-                .replaceAll("%20", " ");
+                const currentSongFilename = currentSong.src
+    .split("/")
+    .pop()
+    .replace(".mp3", "");
+
             const index = songs.indexOf(currentSongFilename);
 
             if (index > 0) {
@@ -189,10 +190,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         forward.addEventListener("click", () => {
             const currentSongFilename = currentSong.src
-                .split("/")
-                .slice(-1)[0]
-                .replace(".mp3", " ")
-                .replaceAll("%20", " ");
+                const currentSongFilename = currentSong.src
+    .split("/")
+    .pop()
+    .replace(".mp3", "");
+
             const index = songs.indexOf(currentSongFilename);
 
             if (index < songs.length - 1) {

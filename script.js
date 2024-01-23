@@ -190,23 +190,22 @@ back.addEventListener("click", () => {
 });
 
    forw.addEventListener("click", () => {
-      const currentSongFilename = currentSong.src
+    const currentSongFilename = currentSong.src
         .split("/")
         .slice(-1)[0]
-        .replace(".mp3", " ")
+        .replace(".mp3", "")
         .replaceAll("%20", " ");
-      const index = songs.indexOf(currentSongFilename);
+    const index = songs.indexOf(currentSongFilename);
 
-      if (index < songs.length - 1) {
-        // If there is a next song, play it
+    if (index < songs.length - 1) {
         const nextSong = songs[index + 1];
         playMusic(nextSong);
-      } else {
-        // If reaching the last song, play the first song
+    } else {
+        // If index is the last index, play the first song in the list
         const firstSong = songs[0];
         playMusic(firstSong);
-      }
-    });
+    }
+});
 
 
         document.querySelector(".circle").addEventListener("mousedown", (e) => {

@@ -152,10 +152,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Volume control
-        document.getElementById("volume-range").addEventListener("input", () => {
-            currentSong.volume = document.getElementById("volume").value / 100;
-        });
+        const volumeInput = document.getElementById("volume");
+    volumeInput.addEventListener("input", () => {
+        currentSong.volume = volumeInput.value / 100;
+    });
 
         currentSong.addEventListener("timeupdate", () => {
             update_time();

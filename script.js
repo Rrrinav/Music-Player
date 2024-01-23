@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // Volume control
-        document.getElementById("volume").addEventListener("input", () => {
+        document.getElementById("volume-range").addEventListener("input", () => {
             currentSong.volume = document.getElementById("volume").value / 100;
         });
 

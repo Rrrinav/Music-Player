@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(`
     .▀█▀.█▄█.█▀█.█▄.█.█▄▀　█▄█.█▀█.█─█
     ─.█.─█▀█.█▀█.█.▀█.█▀▄　─█.─█▄█.█▄█
-`);
+    `);
 
     let songs;
     let currFolder = "Bollywood";
@@ -38,18 +38,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     async function playMusic(track) {
-    const trimmedTrack = track.trim();
-    currentSong.src = `https://rrrinav.github.io/Music-Player/Songs/${currFolder}/${trimmedTrack}.mp3`;
+        const trimmedTrack = track.trim();
+        currentSong.src = `https://rrrinav.github.io/Music-Player/Songs/${currFolder}/${trimmedTrack}.mp3`;
 
-    // Wait for the "loadedmetadata" event before playing
-    currentSong.addEventListener("loadedmetadata", () => {
-        currentSong.play();
-    });
+        // Wait for the "loadedmetadata" event before playing
+        currentSong.addEventListener("loadedmetadata", () => {
+            currentSong.play();
+        });
 
-    document.getElementById("play").src = "assets/pause.svg";
-    document.getElementById("songPlaybarTrname").innerHTML = trimmedTrack;
-}
-
+        document.getElementById("play").src = "assets/pause.svg";
+        document.getElementById("songPlaybarTrname").innerHTML = trimmedTrack;
+    }
 
     async function loadsongs(Folder) {
         try {
@@ -153,6 +152,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
+        // Volume control
+        document.getElementById("volume").addEventListener("input", () => {
+            currentSong.volume = document.getElementById("volume").value / 100;
+        });
+
         currentSong.addEventListener("timeupdate", () => {
             update_time();
             document.querySelector(".circle").style.left =
@@ -172,8 +176,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector("#menu-close").addEventListener("click", () => {
             document.querySelector(".left").style.left = "-120%";
         });
- 
-       back.addEventListener("click", () => {
+
+        back.addEventListener("click", () => {
             currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
             console.log("Previous index:", currentSongIndex);
             playMusic(songs[currentSongIndex]);
@@ -184,7 +188,6 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Next index:", currentSongIndex);
             playMusic(songs[currentSongIndex]);
         });
-
 
         document.querySelector(".circle").addEventListener("mousedown", (e) => {
             e.preventDefault();

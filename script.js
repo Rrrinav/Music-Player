@@ -154,6 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const volumeInput = document.getElementById("volume");
     volumeInput.addEventListener("input", () => {
+        console.log("touched")
         currentSong.volume = volumeInput.value / 100;
     });
 

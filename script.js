@@ -152,13 +152,21 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        const volumeInput = document.getElementById("vol-range");
-    volumeInput.addEventListener("input", () => {
-        console.log("touched")
-        currentSong.volume = volumeInput.value / 100;
-        if(volumeInput.value == 0){
-            document.querySelector(".volume-container img").src = "assets/volume-mute.svg";
-        }});
+      const volumeInput = document.getElementById("vol-range");
+
+volumeInput.addEventListener("input", () => {
+    console.log("touched");
+    currentSong.volume = volumeInput.value / 100;
+
+    const volumeIcon = document.querySelector(".volume-container img");
+
+    if (volumeInput.value == 0) {
+        volumeIcon.src = "assets/volume-mute.svg";
+    } else {
+        volumeIcon.src = "assets/volume.svg"; // Replace with the path to your original volume icon
+    }
+});
+
 
         currentSong.addEventListener("timeupdate", () => {
             update_time();

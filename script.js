@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
             playMusic(songs[currentSongIndex]);
         });
 
-        forward.addEventListener("click", () => {
+        forw.addEventListener("click", () => {
             currentSongIndex = (currentSongIndex + 1) % songs.length;
             console.log("Next index:", currentSongIndex);
             playMusic(songs[currentSongIndex]);

@@ -1,120 +1,108 @@
-[
+{
+  "playlists": [
     {
-        "playlistName": "Bollywood",
-        "description": "Best Bollywood songs",
-        "songs": [
-            {
-                "name": "Senorita",
-                "artist": "Pritam"
-            },
-            {
-                "name": "Achha Lagta Hai",
-                "artist": "Shreya Ghoshal"
-            },
-            {
-                "name": "Ambarsariya",
-                "artist": "Sonia Mohapatra"
-            },
-            {
-                "name": "Iktara",
-                "artist": "Amit Trivedi"
-            },
-            {
-                "name": "Tere Bina",
-                "artist": "A.R. Rahman"
-            }
-        ]
+      "title": "Bollywood",
+      "description": "Best Bollywood songs",
+      "songs": [
+        {
+          "name": "Senorita",
+          "artist": "Pritam"
+        },
+        {
+          "name": "Achha Lagta Hai",
+          "artist": "Shreya Ghoshal"
+        },
+        {
+          "name": "Ambarsariya",
+          "artist": "Sonia Mohapatra"
+        },
+        {
+          "name": "Iktara",
+          "artist": "Amit Trivedi"
+        },
+        {
+          "name": "Tere Bina",
+          "artist": "A.R. Rahman"
+        }
+      ]
     },
     {
-        "playlistName": "DHH",
-        "description": "Sit back and groove",
-        "songs": [
-            {
-                "name": "Luka Chippi",
-                "artist": "Seedhe Maut"
-            },
-            {
-                "name": "Maharani",
-                "artist": "Arpit Bala"
-            },
-            {
-                "name": "VYANJAN",
-                "artist": "Kr$na"
-            },
-            {
-                "name": "IDENTITY THEFT",
-                "artist": "Char Diwari"
-            }
-        ]
+      "title": "DHH",
+      "description": "Sit back and groove",
+      "songs": [
+        {
+          "name": "Luka Chippi",
+          "artist": "Seedhe Maut"
+        },
+        {
+          "name": "Maharani",
+          "artist": "Arpit Bala"
+        },
+        {
+          "name": "VYANJAN",
+          "artist": "Kr$na"
+        },
+        {
+          "name": "IDENTITY THEFT",
+          "artist": "Char Diwari"
+        }
+      ]
     },
     {
-        "playlistName": "Ghazals",
-        "description": "Relax your mind with soothing melodies",
-        "songs": [
-            {
-                "name": "Aye Dil",
-                "artist": "Jagjit Singh"
-            },
-            {
-                "name": "Manzilein Kya Hai Raasta Kya Hai",
-                "artist": "Jagjit Singh"
-            },
-            {
-                "name": "Pukarta Chala",
-                "artist": "Mohammed Rafi"
-            },
-            {
-                "name": "Rafta Rafta",
-                "artist": "Mukesh"
-            },
-            {
-                "name": "Yeh Honsla",
-                "artist": "Shafqat Amanat Ali"
-            }
-        ]
+      "title": "Ghazals",
+      "description": "Relax your mind with soothing melodies",
+      "songs": [
+        {
+          "name": "Aye Dil",
+          "artist": "Pritam"
+        },
+        {
+          "name": "Manzilein Kya Hai Raasta Kya Hai",
+          "artist": "Jagjit Singh"
+        },
+        {
+          "name": "Pukarta Chala",
+          "artist": "Sonia Mohapatra"
+        },
+        {
+          "name": "Rafta Rafta",
+          "artist": "Amit Trivedi"
+        },
+        {
+          "name": "Yeh Honsla",
+          "artist": "A.R. Rahman"
+        }
+      ]
     },
     {
-        "playlistName": "Memes",
-        "description": "Fun and meme-worthy tracks",
-        "songs": [
-            {
-                "name": "Meme Song 1",
-                "artist": "Meme Artist 1"
-            },
-            {
-                "name": "Meme Song 2",
-                "artist": "Meme Artist 2"
-            }
-        ]
-    },
-    {
-        "playlistName": "Your Playlist Title",
-        "description": "Your playlist description",
-        "songs": [
-            {
-                "name": "Bihari Boy",
-                "artist": "Akash Pal"
-            },
-            {
-                "name": "Choliya Ke Hook",
-                "artist": "Arvind Kallu"
-            },
-            {
-                "name": "Dafa 406",
-                "artist": "Chhotu Shikari"
-            },
-            {
-                "name": "Halal Boy",
-                "artist": "Deen Squad"
-            },
-            {
-                "name": "Mamta's Interlude",
-                "artist": "Gauntlet"
-            },
-            {
-                "name": "Meri Jaan Kasam",
-                "artist": "Aalim Jumma"
-            }
-        ]
+      "title": "Memes",
+      "description": "Laugh out loud with meme-inspired tunes",
+      "songs": [
+        {
+          "name": "Bihari Boy",
+          "artist": "Akash Pal"
+        },
+        {
+          "name": "Choliya Ke Hook",
+          "artist": "Arvind Kallu"
+        },
+        {
+          "name": "Dafa 406",
+          "artist": "Chhotu Shikari"
+        },
+        {
+          "name": "Halal Boy",
+          "artist": "Deen Squad"
+        },
+        {
+          "name": "Mamta's Interlude",
+          "artist": "Gauntlet"
+        },
+        {
+          "name": "Meri Jaan Kasam",
+          "artist": "Aalim Jumma"
+        }
+      ]
     }
-]
+  ]
+}
